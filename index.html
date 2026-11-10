@@ -70,28 +70,34 @@
             font-weight: 600;
         }
 
-        /* MOVING PNG ANIMATION */
+     /* MOVING PNG ANIMATION */
 
-        .moving-image {
-            width: 200px;
-            height: auto;
-            position: fixed;
-            top: 40%;
-            left: 100%;
-            z-index: 9999;
-            pointer-events: none;
+.moving-image {
+    width: 200px;
+    height: auto;
 
-            animation: moveAcross 8s linear 1s 1 forwards;
-        }
+    position: fixed;
+    top: 40%;
 
-        @keyframes moveAcross {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(calc(-100vw - 100%));
-            }
-        }
+    /* Start completely off the RIGHT side */
+    left: 100vw;
+
+    z-index: 9999;
+    pointer-events: none;
+
+    animation: moveAcross 8s linear 1s 1 forwards;
+}
+
+@keyframes moveAcross {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100vw - 220px));
+    }
+}
 
         /* MAIN CONTENT */
 
